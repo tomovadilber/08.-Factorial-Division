@@ -1,0 +1,33 @@
+using System;
+using System.Linq;
+using System.Numerics;
+
+namespace Array
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            double factorial = double.Parse(Console.ReadLine());
+            double devide = double.Parse(Console.ReadLine());
+
+
+            double finalFactorial = factorial;
+            double finaDevide = devide;
+
+            for (double i = factorial -1; i >= 2; i--)
+            {
+                finalFactorial *= i;
+            }
+
+            for (double i = devide - 1; i >= 2; i--)
+            {
+                finaDevide *= i;
+            }
+
+            double res = finalFactorial / finaDevide;
+            Console.WriteLine($"{res:f2}");
+        }
+    }
+}
